@@ -1,6 +1,6 @@
-
-
-
+<!DOCTYPE html>
+<html>
+<head>
   <title>Topics</title>
   <style>
     h1 {
@@ -32,18 +32,27 @@
       margin: 0;
       font-family: Arial, sans-serif;
     }
+
+    a {
+      color: #00ffff;
+      text-decoration: underline;
+    }
+
+    a:hover {
+      color: #ffcc00;
+    }
   </style>
+</head>
 
-
-
+<body>
 
   <h1>TOPICS</h1>
 
   <h4 class="topic" onclick="toggleSection('cardiology-section')">Cardiology</h4>
   <div id="cardiology-section" class="toggle-section">
     <p><strong>Discussions:</strong> <a href="discussions-cardiology.html">Click here</a></p>
-    <p><strong>Videos:</strong> <a href="videos.html">Click here</a></p><a href="videos.html">
-  </a></div><a href="videos.html">
+    <p><strong>Videos:</strong> Link or embed here</p>
+  </div>
 
   <h4 class="topic" onclick="toggleSection('hematology-section')">Hematology</h4>
   <div id="hematology-section" class="toggle-section">
@@ -57,8 +66,12 @@
     <p><strong>Videos:</strong> Link or embed here</p>
   </div>
 
-  
+  <script>
+    function toggleSection(id) {
+      const section = document.getElementById(id);
+      section.style.display = (section.style.display === "block") ? "none" : "block";
+    }
+  </script>
 
-
-
-</a>
+</body>
+</html>
